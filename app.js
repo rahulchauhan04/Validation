@@ -84,4 +84,4 @@ function updatePlaceholder() {
 // Start the placeholder animation
 setInterval(updatePlaceholder, 200); // Adjust the speed as necessary
 
-// The rest of your JavaScript code remains unchanged
+
