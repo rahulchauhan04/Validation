@@ -1,0 +1,302 @@
+body {
+    font-family: Inter, sans-serif;
+}
+
+.form-container {
+    width: 498px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 360px;
+    height: 28px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 0 5px;
+    color: #555555;
+}
+
+.error-message, .success-message {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.error-message {
+    color: #FF0000;
+}
+
+.success-message {
+    color: #219F35;
+}
+
+#submit-btn {
+    width: 128px;
+    height: 27px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5; /* Professional dull white background */
+    font-family: Inter, sans-serif;
+}
+
+.form-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow to lift the card */
+    border-radius: 8px; /* Rounded corners for the card */
+    background-color: #FFFFFF; /* Card background */
+    padding: 40px; /* Spacing inside the card */
+    width: 100%;
+    max-width: 360px; /* Max width for the card */
+    margin: 0 auto; /* Centering the card */
+    box-sizing: border-box;
+    position: relative; /* For positioning elements inside the container */
+}
+
+.input-group input {
+    width: calc(100% - 10px); /* Full width minus padding */
+    height: 40px; /* Increased height for better touch area */
+    margin-bottom: 20px; /* Spacing between input fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners for input fields */
+    padding: 10px; /* Padding inside input fields */
+    font-size: 14px; /* Slightly larger font size */
+    box-sizing: border-box; /* Border box for proper width calculation */
+}
+
+#submit-btn {
+    width: calc(100% - 10px); /* Full width minus padding */
+    height: 50px; /* Increased height for a larger click area */
+    border-radius: 5px; /* Rounded corners for the button */
+    background-color: #007BFF; /* Blue color for the button */
+    color: white; /* Text color for the button */
+    font-size: 16px; /* Larger font size for the button */
+    border: none; /* No border for the button */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for button hover effect */
+}
+
+#submit-btn:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Error and success message styles remain the same */
+
+/* Add to your existing CSS */
+
+/* Floating Text Animation Styles */
+@keyframes floatIn {
+    0%, 100% { transform: translateY(-50px); opacity: 0; }
+    10%, 90% { transform: translateY(0); opacity: 1; }
+  }
+  
+  /* Add a container for the floating texts if it doesn't exist in your HTML */
+  .floating-texts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: 0; /* Behind the form container */
+  }
+  
+  .floating-text {
+    position: absolute;
+    white-space: nowrap;
+    opacity: 0; /* Start fully transparent */
+    color: #333; /* Text color */
+    font-size: 18px; /* Text size */
+    animation: floatIn 15s infinite linear alternate; /* Smooth, continuous animation */
+  }
+  
+  /* Positioning the text elements */
+  .floating-text:nth-child(1) {
+    top: 20%;
+    left: 10%;
+  }
+  
+  .floating-text:nth-child(2) {
+    top: 40%;
+    left: 70%;
+  }
+  
+  .floating-text:nth-child(3) {
+    top: 60%;
+    left: 20%;
+  }
+  
+  .floating-text:nth-child(4) {
+    top: 80%;
+    left: 60%;
+  }
+  
+  /* Ensure the form container has a higher z-index */
+  .form-container {
+    z-index: 10; /* Higher than the floating texts */
+    position: relative; /* Required for z-index to take effect */
+  }
+  
+
+  .card {
+    width: 300px; /* Example width */
+    height: 200px; /* Example height */
+    position: relative;
+    z-index: 2; /* Ensure the card is above the animated football */
+    /* Other styling for your card */
+  }
+  
+  .football-animation {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevents the football from being visible outside this container */
+    position: absolute;
+    top: -50px; /* Adjust as needed to place the football above the card */
+    left: 0;
+    z-index: 1; /* Below the card */
+    pointer-events: none; /* Allows clicks to pass through the animation */
+  }
+  
+  .football {
+    width: 50px; /* Example size - adjust based on your icon's dimensions */
+    height: 50px; /* Example size - adjust based on your icon's dimensions */
+    position: absolute;
+    top: 50%; /* Center vertically in the football-animation container */
+    left: -60px; /* Start offscreen */
+    transform: translateY(-50%); /* Center the football vertically with respect to its own height */
+    animation: kickBall 15s linear infinite;
+  }
+  
+  @keyframes kickBall {
+    0% { left: -60px; }
+    50% { left: calc(100% - 50px); /* Subtract the width of the football */ }
+    100% { left: -60px; }
+  }
+  
+  .football {
+    width: 50px; /* Set the size of your football icon */
+    height: 50px; /* Set the size of your football icon */
+    position: absolute;
+    bottom: -60px; /* Start below the view */
+    animation: bounceAndMove 5s linear infinite;
+  }
+  
+  /* Define keyframes for the combined bounce and horizontal movement */
+  @keyframes bounceAndMove {
+    0%, 100% {
+      left: 0;
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(80px); /* Adjust for the height of the bounce */
+    }
+    50% {
+      left: 50%; /* Move halfway across the container */
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(60px); /* Adjust for the height of the bounce */
+    }
+    100% {
+      left: 100%; /* Move all the way to the other side */
+      transform: translateY(0);
+    }
+  }
+
+  .football {
+    width: 50px; /* Set the size of your football icon */
+    height: 50px; /* Set the size of your football icon */
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: arcMovement 8s linear infinite;
+  }
+  
+  /* Define keyframes for the arc movement */
+  @keyframes arcMovement {
+    0%, 100% {
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+    }
+    10% {
+      top: 10%;
+      transform: translateX(10%);
+    }
+    20% {
+      top: 20%;
+      transform: translateX(20%);
+    }
+    30% {
+      top: 30%;
+      transform: translateX(30%);
+    }
+    40% {
+      top: 40%;
+      transform: translateX(40%);
+    }
+    50% {
+      top: 50%;
+      transform: translateX(50%);
+    }
+    60% {
+      top: 60%;
+      transform: translateX(60%);
+    }
+    70% {
+      top: 70%;
+      transform: translateX(70%);
+    }
+    80% {
+      top: 80%;
+      transform: translateX(80%);
+    }
+    90% {
+      top: 90%;
+      transform: translateX(90%);
+    }
+    100% {
+      top: 100%;
+      left: 100%;
+      transform: translate(100%, 100%);
+    }
+  }
+
+  @keyframes arcMovement {
+    /* ... other keyframes ... */
+    50% {
+      top: 50%;
+      transform: translateX(50%) scale(1.2); /* The ball appears larger at the closest point */
+    }
+    /* ... other keyframes ... */
+  }
+  
+  
