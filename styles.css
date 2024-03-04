@@ -1,64 +1,3 @@
-body {
-    font-family: Inter, sans-serif;
-}
-
-.form-container {
-    width: 498px;
-    background-color: #FFFFFF;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    font-size: 12px;
-    color: #000000;
-    margin-bottom: 5px;
-}
-
-.input-group input {
-    width: 360px;
-    height: 28px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    font-size: 12px;
-    padding: 0 5px;
-    color: #555555;
-}
-
-.error-message, .success-message {
-    font-size: 12px;
-    line-height: 15px;
-    margin-top: 5px;
-    text-align: left;
-}
-
-.error-message {
-    color: #FF0000;
-}
-
-.success-message {
-    color: #219F35;
-}
-
-#submit-btn {
-    width: 128px;
-    height: 27px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    background-color: #000000;
-    color: white;
-    font-size: 12px;
-    line-height: 15px;
-    text-align: center;
-    cursor: pointer;
-}
-
 body, html {
     height: 100%;
     margin: 0;
@@ -108,9 +47,31 @@ body, html {
     background-color: #0056b3; /* Darker blue when hovered */
 }
 
-/* Error and success message styles remain the same */
+.input-group {
+    margin-bottom: 20px;
+}
 
-/* Add to your existing CSS */
+.input-group label {
+    display: block;
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.error-message, .success-message {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.error-message {
+    color: #FF0000;
+}
+
+.success-message {
+    color: #219F35;
+}
 
 /* Floating Text Animation Styles */
 @keyframes floatIn {
@@ -165,7 +126,6 @@ body, html {
     position: relative; /* Required for z-index to take effect */
   }
   
-
   .card {
     width: 300px; /* Example width */
     height: 200px; /* Example height */
@@ -232,8 +192,8 @@ body, html {
   }
 
   .football {
-    width: 50px; /* Set the size of your football icon */
-    height: 50px; /* Set the size of your football icon */
+    width: 50px; /*  size of  football icon */
+    height: 50px; /*  size of  football icon */
     position: absolute;
     top: 0;
     left: 0;
@@ -291,12 +251,10 @@ body, html {
   }
 
   @keyframes arcMovement {
-    /* ... other keyframes ... */
     50% {
       top: 50%;
       transform: translateX(50%) scale(1.2); /* The ball appears larger at the closest point */
-    }
-    /* ... other keyframes ... */
+    }\
   }
   
   
